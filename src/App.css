@@ -1,0 +1,148 @@
+export default function App() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+
+        {/* Glow Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-transparent to-blue-500/20 blur-3xl"></div>
+
+        <div className="relative mx-auto max-w-7xl px-6 py-28 lg:flex lg:items-center lg:justify-between">
+
+          {/* Left */}
+          <div className="max-w-2xl">
+
+            <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
+              Transcripción Inteligente con IA
+            </span>
+
+            <h1 className="mt-8 text-5xl font-extrabold leading-tight lg:text-7xl">
+              Convierte tus
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                {" "}audios y videos{" "}
+              </span>
+              en texto profesional
+            </h1>
+
+            <p className="mt-8 text-xl leading-relaxed text-gray-300">
+              Servicio rápido, preciso y profesional de transcripción
+              para entrevistas, reuniones, podcasts, clases y contenido digital.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+
+              <button className="rounded-2xl bg-cyan-400 px-8 py-4 text-lg font-bold text-black transition hover:scale-105 hover:bg-cyan-300">
+                Solicitar Transcripción
+              </button>
+
+              <button className="rounded-2xl border border-white/20 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur transition hover:bg-white/10">
+                Ver Servicios
+              </button>
+
+            </div>
+
+          </div>
+
+          {/* Right Card */}
+          <div className="mt-16 lg:mt-0">
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-xl">
+
+              <div className="space-y-6">
+
+                <div className="rounded-2xl bg-black/40 p-5">
+                  <p className="text-sm text-gray-400">
+                    Audio recibido
+                  </p>
+                  <p className="mt-2 text-lg font-semibold">
+                    entrevista_podcast.mp3
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-cyan-500/10 p-5 border border-cyan-400/20">
+                  <p className="text-sm text-cyan-300">
+                    IA procesando...
+                  </p>
+
+                  <div className="mt-4 h-3 overflow-hidden rounded-full bg-white/10">
+                    <div className="h-full w-4/5 rounded-full bg-cyan-400"></div>
+                  </div>
+
+                  <p className="mt-3 text-sm text-gray-300">
+                    Precisión estimada: 98%
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-black/40 p-5">
+                  <p className="text-sm text-gray-400">
+                    Entrega rápida
+                  </p>
+
+                  <p className="mt-2 text-lg font-semibold">
+                    Formato Word, PDF o TXT
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* SERVICES */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+
+        <div className="text-center">
+          <h2 className="text-4xl font-bold">
+            Servicios Profesionales
+          </h2>
+
+          <p className="mt-6 text-lg text-gray-400">
+            Soluciones modernas de transcripción y asistencia digital.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <h3 className="text-2xl font-bold">
+              Transcripción Audio
+            </h3>
+
+            <p className="mt-4 text-gray-400">
+              Convertimos audios en documentos organizados y profesionales.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <h3 className="text-2xl font-bold">
+              Transcripción Video
+            </h3>
+
+            <p className="mt-4 text-gray-400">
+              Procesamiento de reuniones, podcasts, clases y entrevistas.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <h3 className="text-2xl font-bold">
+              Asistencia IA
+            </h3>
+
+            <p className="mt-4 text-gray-400">
+              Automatización y apoyo inteligente para negocios digitales.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  )
+}
