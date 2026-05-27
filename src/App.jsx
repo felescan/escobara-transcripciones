@@ -22,11 +22,16 @@ export default function App() {
 
             <a href="#" className="transition hover:text-cyan-400">
               Inicio
-            </a>
-
-            <a href="Servicios" className="transition hover:text-cyan-400">
-              Servicios
-            </a>
+            <button
+  onClick={() =>
+    document.getElementById("services")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="transition hover:text-cyan-400"
+>
+  Servicios
+</button>
 
             <a href="#" className="transition hover:text-cyan-400">
               IA
