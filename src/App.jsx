@@ -24,7 +24,7 @@ export default function App() {
               Inicio
             </a>
 
-            <a href="#" className="transition hover:text-cyan-400">
+            <a href="Servicios" className="transition hover:text-cyan-400">
               Servicios
             </a>
 
