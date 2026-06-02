@@ -3,20 +3,56 @@ import { useState } from "react"
 
 export default function App() {
   const [chatbotOpen, setChatbotOpen] = useState(false)
-
+  const [selectedFile, setSelectedFile] = useState(null)
   const whatsappLink =
     "https://wa.me/573147000760?text=Hola,%20quiero%20solicitar%20una%20transcripci%C3%B3n"
 
   const handleFormSubmit = (e) => {
-    e.preventDefault()
-    window.open(whatsappLink, "_blank")
-  }
+  e.preventDefault()
+
+  const form = e.target
+
+  const nombre = form[0].value
+  const correo = form[1].value
+  const telefono = form[2].value
+  const descripcion = form[3].value
+
+  const archivo = selectedFile
+    ? `${selectedFile.name} (${(selectedFile.size / 1024 / 1024).toFixed(2)} MB)`
+    : "No se adjuntó archivo"
+
+  const mensaje = `
+Hola, deseo solicitar una transcripción.
+
+DATOS DEL CLIENTE
+
+Nombre: ${nombre}
+Correo: ${correo}
+WhatsApp: ${telefono}
+
+ARCHIVO
+
+${archivo}
+
+DESCRIPCIÓN
+
+${descripcion}
+
+Adjunto el archivo para cotización.
+`
+
+  const url =
+    "https://wa.me/573147000760?text=" +
+    encodeURIComponent(mensaje)
+
+  window.open(url, "_blank")
+}
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0]
 
     if (file) {
-      alert(`Archivo seleccionado: ${file.name}`)
+         setSelectedFile(file)
     }
   }
 
@@ -64,8 +100,7 @@ export default function App() {
               IA + Automatización + Transcripción Profesional
             </span>
 
-            <h1 className="mt-10 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-7xl">
-              Transformamos
+            <h1 className="mt-10 text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-tight">
 
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {" "}audio y video{" "}
@@ -81,14 +116,14 @@ export default function App() {
 
             <div className="mt-10 flex flex-col gap-5 sm:flex-row">
               <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-2xl bg-cyan-400 px-8 py-4 text-center text-lg font-bold text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(34,211,238,0.8)]"
-              >
-                Solicitar Transcripción
-              </a>
-
+      
+  href={whatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block rounded-2xl bg-cyan-400 px-8 py-4 text-center text-lg font-bold text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(34,211,238,0.8)]"
+>
+  WhatsApp
+</a>
               <a
                 href="#servicios"
                 className="rounded-2xl border border-white/20 bg-white/5 px-8 py-4 text-center text-lg font-semibold text-white backdrop-blur transition hover:bg-white/10"
@@ -100,41 +135,42 @@ export default function App() {
 
           <div className="relative">
             <div className="rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-xl">
-              <div className="space-y-6">
-                <div className="rounded-2xl bg-black/40 p-5">
-                  <p className="text-sm text-gray-400">Archivo cargado</p>
-                  <p className="mt-2 text-lg font-semibold">
-                    reunion_empresa.mp4
-                  </p>
-                </div>
+            <div className="space-y-4">
+  <h3 className="text-2xl font-bold text-cyan-300">
+    ¿Cómo funciona?
+  </h3>
 
-                <div className="rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-5">
-                  <p className="text-sm text-cyan-300">
-                    Procesando con IA...
-                  </p>
+  <div className="rounded-2xl bg-black/40 p-4">
+    1️⃣ Carga tu archivo de audio o video.
+  </div>
 
-                  <div className="mt-4 h-3 overflow-hidden rounded-full bg-white/10">
-                    <div className="h-full w-4/5 rounded-full bg-cyan-400"></div>
-                  </div>
-                </div>
+  <div className="rounded-2xl bg-black/40 p-4">
+    2️⃣ Analizamos duración y complejidad.
+  </div>
 
-                <div className="rounded-2xl bg-black/40 p-5">
-                  <p className="text-sm text-gray-400">
-                    Documento generado
-                  </p>
+  <div className="rounded-2xl bg-black/40 p-4">
+    3️⃣ Recibes una cotización personalizada.
+  </div>
 
-                  <p className="mt-2 text-lg font-semibold">
-                    transcripcion_final.docx
-                  </p>
-                </div>
-              </div>
+  <div className="rounded-2xl bg-black/40 p-4">
+    4️⃣ Apruebas el trabajo y realizas un anticipo del 50%.
+  </div>
+
+  <div className="rounded-2xl bg-black/40 p-4">
+    5️⃣ Realizamos la transcripción profesional.
+  </div>
+
+  <div className="rounded-2xl bg-black/40 p-4">
+    6️⃣ Cancelas el saldo restante y recibes el documento final.
+  </div>
+</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* SERVICES */}
-      <section id="servicios" className="relative mx-auto max-w-7xl px-6 py-28">
+      <section id="servicios" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-28">
         <div className="relative text-center">
           <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
             Servicios Premium
@@ -170,20 +206,41 @@ export default function App() {
             Sube tus archivos
           </h2>
 
-          <div className="mt-10">
-            <label className="cursor-pointer rounded-2xl bg-cyan-400 px-8 py-5 text-lg font-bold text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(34,211,238,0.8)]">
-              Seleccionar Archivo
+     <div className="mt-10">
+  <label className="cursor-pointer rounded-2xl bg-cyan-400 px-8 py-5 text-lg font-bold text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(34,211,238,0.8)]">
+    Seleccionar Archivo
 
-              <input
-                type="file"
-                className="hidden"
-                onChange={handleFileUpload}
-              />
-            </label>
-          </div>
-        </div>
-      </section>
+    <input
+      type="file"
+      className="hidden"
+      onChange={handleFileUpload}
+    />
+  </label>
 
+  {selectedFile && (
+    <div className="mt-6 rounded-2xl border border-cyan-400/30 bg-cyan-400/10 p-4 text-left">
+      <p className="font-bold text-cyan-300">
+        ✓ Archivo recibido
+      </p>
+
+      <p className="mt-2">
+        <strong>Nombre:</strong> {selectedFile.name}
+      </p>
+
+      <p>
+        <strong>Tamaño:</strong>{" "}
+        {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
+      </p>
+  
+  
+   <p className="mt-3 text-sm text-gray-300">
+  Formatos aceptados: MP3, WAV, M4A, MP4, AVI, MOV y otros formatos de audio o video.
+</p>
+    </div>
+  )}
+</div>
+</div>
+</section>
       {/* CONTACT */}
       <section id="contacto" className="mx-auto max-w-5xl px-6 py-28">
         <div className="rounded-[32px] border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
@@ -205,15 +262,43 @@ export default function App() {
               placeholder="Correo electrónico"
               className="rounded-2xl border border-white/10 bg-black/40 px-6 py-4 outline-none transition focus:border-cyan-400"
             />
-
+<input
+  type="tel"
+  placeholder="WhatsApp"
+  className="rounded-2xl border border-white/10 bg-black/40 px-6 py-4 outline-none transition focus:border-cyan-400"
+/>
             <textarea
               rows="5"
               placeholder="Describe tu proyecto..."
               className="rounded-2xl border border-white/10 bg-black/40 px-6 py-4 outline-none transition focus:border-cyan-400"
             ></textarea>
+<div className="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 p-6 text-left text-sm text-gray-200">
+  <p className="text-lg font-bold text-cyan-300">
+    📎 Importante
+  </p>
 
+  <p className="mt-2">
+    1. Pulsa "Enviar Solicitud".
+  </p>
+
+  <p>
+    2. Se abrirá WhatsApp con los datos de tu solicitud.
+  </p>
+
+  <p>
+    3. Adjunta el archivo de audio o video.
+  </p>
+
+  <p>
+    4. Envía el mensaje.
+  </p>
+
+  <p className="mt-3">
+    Una vez recibido, analizaremos su duración y complejidad y te enviaremos una cotización personalizada.
+  </p>
+</div>
             <button className="rounded-2xl bg-cyan-400 px-8 py-5 text-lg font-bold text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(34,211,238,0.8)]">
-              Solicitar Transcripción
+              Enviar Solicitud
             </button>
           </form>
         </div>
@@ -222,14 +307,14 @@ export default function App() {
       {/* CHAT BUTTON */}
       <button
         onClick={() => setChatbotOpen(!chatbotOpen)}
-        className="fixed bottom-24 right-4 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-cyan-400 text-3xl text-black shadow-[0_0_40px_rgba(34,211,238,0.5)] transition duration-300 hover:scale-110"
+        className="fixed bottom-6 right-4 z-50 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-cyan-400 text-3xl text-black shadow-[0_0_40px_rgba(34,211,238,0.5)] transition duration-300 hover:scale-110"
       >
         {chatbotOpen ? "✕" : "🤖"}
       </button>
 
       {chatbotOpen && (
-        <div className="fixed bottom-44 right-4 z-50 w-[350px] overflow-hidden rounded-[28px] border border-cyan-400/20 bg-black/90 shadow-[0_0_60px_rgba(34,211,238,0.25)] backdrop-blur-xl">
-          <div className="p-5 text-sm text-gray-200">
+        <div className="fixed bottom-24 right-2 sm:right-4 z-50 w-[85vw] max-w-[300px] overflow-hidden rounded-[28px] border border-cyan-400/20 bg-black/90 shadow-[0_0_60px_rgba(34,211,238,0.25)] backdrop-blur-xl">
+          <div className="p-5 text-xs sm:text-sm text-gray-200">
             👋 Hola, soy Escobara IA.
             <br />
             Puedes escribirnos directamente por WhatsApp.
