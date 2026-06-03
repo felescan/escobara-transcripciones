@@ -62,7 +62,7 @@ Adjunto el archivo para cotización.
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <h1 className="text-2xl font-extrabold tracking-wide">
-            <span className="text-cyan-400">ESCOBARA</span> ONLINE
+            <span className="text-cyan-400"></span> ONLINE
           </h1>
 
           <div className="hidden gap-8 text-sm font-medium text-gray-300 md:flex">
@@ -153,7 +153,7 @@ Adjunto el archivo para cotización.
   </div>
 
   <div className="rounded-2xl bg-black/40 p-4">
-    4️⃣ Apruebas el trabajo y realizas un anticipo del 50%.
+    4️⃣ Apruebas el trabajo y haces un anticipo del 50%.
   </div>
 
   <div className="rounded-2xl bg-black/40 p-4">
@@ -178,12 +178,12 @@ Adjunto el archivo para cotización.
   <div style={{
     maxWidth: "520px",
     width: "100%",
-    background: "#ffffff",
+    background: "#111827",
     borderRadius: "18px",
     padding: "35px 30px",
     textAlign: "center",
-    boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
-    border: "1px solid #eee"
+    boxShadow: "0 0 40px rgba(34,211,238,0.15)",
+    border: "1px rgba(34,211,238,0.2)"
   }}>
 
     <div style={{ fontSize: "30px", marginBottom: "10px" }}>
@@ -199,15 +199,15 @@ Adjunto el archivo para cotización.
     </h2>
 
     <p style={{
-      fontSize: "15px",
-      color: "#555",
+      fontSize: "18px",
+      color: "#d1d5db",
       marginBottom: "25px"
     }}>
       Servicio de transcripción manual con alta precisión y entrega organizada.
     </p>
 
     <div style={{
-      fontSize: "17px",
+      fontSize: "24px",
       lineHeight: "2",
       marginBottom: "25px"
     }}>
@@ -217,8 +217,8 @@ Adjunto el archivo para cotización.
     </div>
 
     <div style={{
-      fontSize: "13px",
-      color: "#777",
+      fontSize: "16px",
+      color: "#9ca3af",
       marginBottom: "25px"
     }}>
       📌 Se cobra por tiempo de audio o video o fracción del mismo.
@@ -230,13 +230,13 @@ Adjunto el archivo para cotización.
       rel="noopener noreferrer"
     >
       <button style={{
-        background: "#000",
-        color: "#fff",
+        background: "#22d3ee",
+        color: "#000",
         padding: "12px 18px",
         borderRadius: "10px",
         border: "none",
         cursor: "pointer",
-        fontSize: "15px"
+        fontSize: "18px"
       }}>
         Solicitar ahora por WhatsApp
       </button>
@@ -244,7 +244,6 @@ Adjunto el archivo para cotización.
 
   </div>
 
-</section>
 </section>
       {/* SERVICES */}
       <section id="servicios" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-28">
