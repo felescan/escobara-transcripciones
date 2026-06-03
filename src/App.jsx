@@ -214,6 +214,7 @@ Adjunto el archivo para cotización.
       🎧 <strong>30 minutos:</strong> 5 USD<br />
       🎧 <strong>1 hora:</strong> 7 USD<br />
       ⚡ <strong>Entrega urgente:</strong> +30%
+       <strong>Traducción y transcripción a otro idioma:</strong> +50%
     </div>
 
     <div style={{
@@ -222,6 +223,9 @@ Adjunto el archivo para cotización.
       marginBottom: "25px"
     }}>
       📌 Se cobra por tiempo de audio o video o fracción del mismo.
+       ✓ Entrega en Word (.docx), PDF u OpenDocument (.odt)<br />
+       ✓ Transcripción en el idioma requerido<br />
+       ✓ Documento listo para editar o imprimir
     </div>
 
     <a
