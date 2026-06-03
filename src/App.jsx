@@ -169,6 +169,27 @@ Adjunto el archivo para cotización.
         </div>
       </section>
 
+<section>
+  <h2>💰 Precios simples y transparentes</h2>
+
+  <p>
+    Ofrecemos un servicio de transcripción manual con alta precisión y entrega organizada.
+  </p>
+
+  <br />
+
+  <p>🎧 30 minutos de audio o video: <strong>5 USD</strong></p>
+  <p>🎧 1 hora de audio o video: <strong>7 USD</strong></p>
+
+  <p>⚡ Entrega urgente (24h o menos): <strong>+30% adicional</strong></p>
+
+  <br />
+
+  <p>
+    📌 Se cobra por tiempo de audio o video o fracción del mismo.
+  </p>
+</section>
+
       {/* SERVICES */}
       <section id="servicios" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-28">
         <div className="relative text-center">
