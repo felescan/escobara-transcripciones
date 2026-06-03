@@ -169,42 +169,82 @@ Adjunto el archivo para cotización.
         </div>
       </section>
 
-  <section style={{
+ <section style={{
   display: "flex",
   justifyContent: "center",
   padding: "60px 20px"
 }}>
 
   <div style={{
-    maxWidth: "500px",
+    maxWidth: "520px",
     width: "100%",
-    textAlign: "center",
     background: "#ffffff",
-    padding: "40px 25px",
-    borderRadius: "16px",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
+    borderRadius: "18px",
+    padding: "35px 30px",
+    textAlign: "center",
+    boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
+    border: "1px solid #eee"
   }}>
 
-    <h2 style={{ fontSize: "26px", marginBottom: "15px" }}>
-      💰 Precios simples y transparentes
+    <div style={{ fontSize: "30px", marginBottom: "10px" }}>
+      💰
+    </div>
+
+    <h2 style={{
+      fontSize: "24px",
+      marginBottom: "12px",
+      fontWeight: "700"
+    }}>
+      Precios simples y transparentes
     </h2>
 
-    <p style={{ fontSize: "15px", marginBottom: "25px", color: "#555" }}>
+    <p style={{
+      fontSize: "15px",
+      color: "#555",
+      marginBottom: "25px"
+    }}>
       Servicio de transcripción manual con alta precisión y entrega organizada.
     </p>
 
-    <div style={{ fontSize: "17px", lineHeight: "2", marginBottom: "20px" }}>
-      🎧 30 minutos de audio o video: <strong>5 USD</strong><br />
-      🎧 1 hora de audio o video: <strong>7 USD</strong><br />
-      ⚡ Entrega urgente (24h o menos): <strong>+30% adicional</strong>
+    <div style={{
+      fontSize: "17px",
+      lineHeight: "2",
+      marginBottom: "25px"
+    }}>
+      🎧 <strong>30 minutos:</strong> 5 USD<br />
+      🎧 <strong>1 hora:</strong> 7 USD<br />
+      ⚡ <strong>Entrega urgente:</strong> +30%
     </div>
 
-    <p style={{ fontSize: "13px", color: "#777" }}>
+    <div style={{
+      fontSize: "13px",
+      color: "#777",
+      marginBottom: "25px"
+    }}>
       📌 Se cobra por tiempo de audio o video o fracción del mismo.
-    </p>
+    </div>
+
+    <a
+      href="https://wa.me/573102808032?text=Hola%2C%20quiero%20solicitar%20una%20transcripci%C3%B3n"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button style={{
+        background: "#000",
+        color: "#fff",
+        padding: "12px 18px",
+        borderRadius: "10px",
+        border: "none",
+        cursor: "pointer",
+        fontSize: "15px"
+      }}>
+        Solicitar ahora por WhatsApp
+      </button>
+    </a>
 
   </div>
 
+</section>
 </section>
       {/* SERVICES */}
       <section id="servicios" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-28">
