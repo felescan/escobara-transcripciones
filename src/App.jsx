@@ -212,9 +212,11 @@ Adjunto el archivo para cotización.
       marginBottom: "25px"
     }}>
       🎧 <strong>30 minutos:</strong> 5 USD<br />
-      🎧 <strong>1 hora:</strong> 7 USD<br />
-      ⚡ <strong>Entrega urgente:</strong> +30%
-       🌐 <strong>Traducción y transcripción</strong><br />
+🎧 <strong>1 hora:</strong> 7 USD<br />
+⚡ <strong>Entrega urgente:</strong> +30%
+<br /><br />
+🌐 <strong>Traducción y transcripción</strong>
+<br />
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>a otro idioma:</strong> +50%
     </div>
 
@@ -223,12 +225,17 @@ Adjunto el archivo para cotización.
       color: "#9ca3af",
       marginBottom: "25px"
     }}>
-      📌 Se cobra por tiempo de audio o video o fracción.
-     ✓ Entrega en Word (.docx)<br />
-     ✓ Entrega en PDF<br />
-     ✓ Entrega en OpenDocument (.odt)<br />
-     ✓ Transcripción en el idioma requerido<br />
-     ✓ Documento listo para editar o imprimir
+      <div>📌 Se cobra por tiempo de audio o video o fracción del mismo.</div>
+
+<div>✓ Entrega en Word (.docx)</div>
+
+<div>✓ Entrega en PDF</div>
+
+<div>✓ Entrega en OpenDocument (.odt)</div>
+
+<div>✓ Transcripción en el idioma requerido</div>
+
+<div>✓ Documento listo para editar o imprimir</div>
     </div>
 
     <a
