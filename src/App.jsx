@@ -298,7 +298,13 @@ Adjunto el archivo para cotización.
   </p>
 </div>
             <button className="rounded-2xl bg-cyan-400 px-8 py-5 text-lg font-bold text-black shadow-[0_0_40px_rgba(34,211,238,0.4)] transition duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(34,211,238,0.8)]">
-              Enviar Solicitud
+            <a
+  href="https://wa.me/573102808032?text=Hola%2C%20quiero%20solicitar%20una%20transcripci%C3%B3n"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button>Enviar solicitud</button>
+</a>
             </button>
           </form>
         </div>
