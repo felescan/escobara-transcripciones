@@ -169,27 +169,33 @@ Adjunto el archivo para cotización.
         </div>
       </section>
 
-<section>
-  <h2>💰 Precios simples y transparentes</h2>
+  <section style={{
+  textAlign: "center",
+  padding: "50px 20px",
+  background: "#f7f7f7",
+  borderRadius: "12px",
+  marginTop: "40px"
+}}>
+  
+  <h2 style={{ fontSize: "28px", marginBottom: "20px" }}>
+    💰 Precios simples y transparentes
+  </h2>
 
-  <p>
+  <p style={{ fontSize: "16px", marginBottom: "30px" }}>
     Ofrecemos un servicio de transcripción manual con alta precisión y entrega organizada.
   </p>
 
-  <br />
+  <div style={{ fontSize: "18px", lineHeight: "2" }}>
+    🎧 30 minutos de audio o video: <strong>5 USD</strong><br />
+    🎧 1 hora de audio o video: <strong>7 USD</strong><br />
+    ⚡ Entrega urgente (24h o menos): <strong>+30% adicional</strong>
+  </div>
 
-  <p>🎧 30 minutos de audio o video: <strong>5 USD</strong></p>
-  <p>🎧 1 hora de audio o video: <strong>7 USD</strong></p>
-
-  <p>⚡ Entrega urgente (24h o menos): <strong>+30% adicional</strong></p>
-
-  <br />
-
-  <p>
+  <p style={{ marginTop: "25px", fontSize: "14px", opacity: 0.8 }}>
     📌 Se cobra por tiempo de audio o video o fracción del mismo.
   </p>
-</section>
 
+</section>
       {/* SERVICES */}
       <section id="servicios" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-28">
         <div className="relative text-center">
