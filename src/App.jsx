@@ -203,7 +203,7 @@ Adjunto el archivo para cotización.
       color: "#d1d5db",
       marginBottom: "25px"
     }}>
-      Servicio de transcripción manual con alta precisión y entrega organizada.
+      Servicio de transcripción con alta precisión y entrega organizada.
     </p>
 
     <div style={{
@@ -222,7 +222,7 @@ Adjunto el archivo para cotización.
       color: "#9ca3af",
       marginBottom: "25px"
     }}>
-      📌 Se cobra por tiempo de audio o video o fracción del mismo.
+      📌 Se cobra por tiempo de audio o video o fracción.
        ✓ Entrega en Word (.docx), PDF u OpenDocument (.odt)<br />
        ✓ Transcripción en el idioma requerido<br />
        ✓ Documento listo para editar o imprimir
