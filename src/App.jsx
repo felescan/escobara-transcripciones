@@ -62,7 +62,7 @@ Adjunto el archivo para cotización.
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <h1 className="text-2xl font-extrabold tracking-wide">
-            <span className="text-cyan-400"></span> ONLINE
+            <span className="text-cyan-400"></span> ESCOBARA.ONLINE
           </h1>
 
           <div className="hidden gap-8 text-sm font-medium text-gray-300 md:flex">
@@ -111,7 +111,7 @@ Adjunto el archivo para cotización.
 
             <p className="mt-8 max-w-2xl text-xl leading-relaxed text-gray-300">
               Servicio premium de transcripción para reuniones,
-              entrevistas, podcasts y contenido empresarial.
+              entrevistas, podcasts y contenido empresarial en 24 horas.
             </p>
 
             <div className="mt-10 flex flex-col gap-5 sm:flex-row">
