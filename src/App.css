@@ -3,13 +3,13 @@ export default function App() {
     <div className="min-h-screen bg-black text-white">
 
       {/* HERO */}
+      w-full
       <section className="relative overflow-hidden">
 
         {/* Glow Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-transparent to-blue-500/20 blur-3xl"></div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-28 lg:flex lg:items-center lg:justify-between">
-
+        <div className="relative mx-auto max-w-7xl px-6 py-28 flex flex-col flex flex-col lg:flex-row-row lg:items-center lg:justify-between
           {/* Left */}
           <div className="max-w-2xl">
 
@@ -17,7 +17,7 @@ export default function App() {
               Transcripción Inteligente con IA
             </span>
 
-            <h1 className="mt-8 text-5xl font-extrabold leading-tight lg:text-7xl">
+            <h1 className="mt-8 text-3xl md:text-5xl lg:text-7xl font-extrabold leading-tight">
               Convierte tus
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {" "}audios y videos{" "}
@@ -30,7 +30,7 @@ export default function App() {
               para entrevistas, reuniones, podcasts, clases y contenido digital.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
 
               <button className="rounded-2xl bg-cyan-400 px-8 py-4 text-lg font-bold text-black transition hover:scale-105 hover:bg-cyan-300">
                 Solicitar Transcripción
@@ -145,4 +145,24 @@ export default function App() {
 
     </div>
   )
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
 }
