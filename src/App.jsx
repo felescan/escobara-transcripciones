@@ -247,24 +247,23 @@ ${descripcion}
     📎 Importante
   </p>
 
-  <p className="mt-2">
-    1️⃣ Pulsa "Enviar solicitud".
+  <p className="mt-3">
+    ✓ Pulsa "Enviar solicitud".
   </p>
 
   <p>
-    2️⃣ Se abrirá WhatsApp con los datos de tu solicitud.
+    ✓ Se abrirá WhatsApp con los datos de tu solicitud.
   </p>
 
   <p>
-    3️⃣ Adjunta tu archivo de audio o video.
+    ✓ Adjunta tu archivo de audio o vídeo.
   </p>
 
   <p>
-    4️⃣ Envía el mensaje.
+    ✓ Envía el mensaje.
   </p>
 
 </div>
-
           <button
             type="submit"
             className="w-full rounded-2xl bg-cyan-400 px-6 py-4 font-bold text-black"
