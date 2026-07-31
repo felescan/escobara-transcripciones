@@ -1,5 +1,4 @@
 import { useState } from "react"
-import logoEscobara from "./assets/Logo Escobara Transcripciones.png"
 
 export default function App() {
   const [chatbotOpen, setChatbotOpen] = useState(false)
@@ -75,14 +74,7 @@ ${descripcion}
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-             <div className="flex items-center gap-3">
-               <img
-                src={logoEscobara}
-                alt="Escobara Transcripciones"
-                className="h-36 w-auto"
-                />
-                <h1 className="text-2xl font-extrabold">ESCOBARA.ONLINE</h1>
-                </div>
+          <h1 className="text-2xl font-extrabold">ESCOBARA.ONLINE</h1>
 
           <a
             href={whatsappLink}
@@ -296,8 +288,41 @@ ${descripcion}
 
 </div>
           <button
-            type="submit"
- 
+            type="button"
+            const transcribeAudio = async () => {
+  if (!selectedFile) {
+    alert("Por favor selecciona un archivo de audio")
+    return
+  }
+
+  try {
+    const formData = new FormData()
+    formData.append("file", selectedFile)
+
+    const res = await fetch("/api/transcribe", {
+      method: "POST",
+      body: formData,
+    })
+
+    const data = await res.json()
+
+    if (!data.text) {
+      alert("No se pudo transcribir el audio")
+      return
+    }
+
+    const mensaje = `📝 Transcripción:\n\n${data.text}`
+
+    const url =
+      "https://wa.me/573147000760?text=" +
+      encodeURIComponent(mensaje)
+
+    window.open(url, "_blank")
+  } catch (error) {
+    console.error(error)
+    alert("Error procesando el audio")
+  }
+}
             className="w-full rounded-2xl bg-cyan-400 px-6 py-4 font-bold text-black"
           >
             Enviar solicitud
